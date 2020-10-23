@@ -9,13 +9,13 @@ struct Claim : Codable {
     var uuid : String?
     var title : String?
     var date : String?
-    var isSolved : String?
+    var isSolved : Int?
     
     init(tit:String?, da: String?) {
         uuid = UUID().uuidString // initialized as uuid
         title = tit
         date = da
-        isSolved = "0" // initialized as false and integer
+        isSolved = 0 // initialized as false and integer
     }
 }
 class ClaimDao{
